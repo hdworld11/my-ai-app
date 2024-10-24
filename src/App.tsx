@@ -1,5 +1,4 @@
 import { generateClient } from "aws-amplify/data";
-import { AIConversationProvider } from '@aws-amplify/ui-react-ai';
 import { createAIHooks, AIConversation } from '@aws-amplify/ui-react-ai';
 import type { Schema } from "../amplify/data/resource";
 
@@ -16,11 +15,9 @@ export default function Page() {
   // 'chat' here should be the key in your schema
 
   return (
-    <AIConversationProvider>
-      <AIConversation
+    <AIConversation
         messages={messages}
         handleSendMessage={sendMessage}
-      />
-    </AIConversationProvider>
+    />
     );
 }
